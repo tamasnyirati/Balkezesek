@@ -1,0 +1,7 @@
+D:\C#programs\Ruander\ModulZaro\Balkezesek\Balkezesek\obj\Debug\Balkezesek.csprojAssemblyReference.cache
+D:\C#programs\Ruander\ModulZaro\Balkezesek\Balkezesek\obj\Debug\Balkezesek.csproj.CoreCompileInputs.cache
+D:\C#programs\Ruander\ModulZaro\Balkezesek\Balkezesek\bin\Debug\Balkezesek.exe.config
+D:\C#programs\Ruander\ModulZaro\Balkezesek\Balkezesek\bin\Debug\Balkezesek.exe
+D:\C#programs\Ruander\ModulZaro\Balkezesek\Balkezesek\bin\Debug\Balkezesek.pdb
+D:\C#programs\Ruander\ModulZaro\Balkezesek\Balkezesek\obj\Debug\Balkezesek.exe
+D:\C#programs\Ruander\ModulZaro\Balkezesek\Balkezesek\obj\Debug\Balkezesek.pdb
