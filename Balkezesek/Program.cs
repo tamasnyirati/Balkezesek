@@ -66,6 +66,7 @@ namespace Balkezesek
             do
             {
                 Console.Write("Kérek egy évszámot 1900 és 1999 között: ");
+                Console.WriteLine();
                 evszamBeker = int.Parse(Console.ReadLine());
                 igaz = evszamBeker >= minEvszam && evszamBeker <= maxEvszam;
             } while (!igaz);
@@ -87,6 +88,29 @@ namespace Balkezesek
                 Console.WriteLine(item.magassag);
                 Console.WriteLine();
             }
+
+            //5.feladat
+        int minIndex = 2000;
+            for (int i = 0; i < N; i++)
+            {
+                if ((versenyzok[i].elso[4]) <= minIndex)
+                {
+                    minIndex = versenyzok[i].elso[4];
+                }
+            }
+                Console.WriteLine($" Legkorábban {minIndex} léptek pályára");
+
+            //6. feladat
+            igaz = false;
+            for (int i = 0; i < N; i++)
+            {
+                if (versenyzok[i].elso[4] < 2000)
+                {
+                    igaz = true;
+                }
+            }
+                Console.WriteLine(igaz? "igen" : "nem");
+
         }//progind
 
         static void Main(string[] args)
