@@ -99,6 +99,7 @@ namespace Balkezesek
                 }
             }
                 Console.WriteLine($" Legkorábban {minIndex} léptek pályára");
+                Console.WriteLine();
 
             //6. feladat
             igaz = false;
@@ -109,9 +110,49 @@ namespace Balkezesek
                     igaz = true;
                 }
             }
+                Console.Write("Igaz, hogy minden játékos 2000 előtt lépett pályára? ");
                 Console.WriteLine(igaz? "igen" : "nem");
+                Console.WriteLine();
 
-        }//progind
+            //7. feladat
+            List<Versenyzo> JohnNevuek = new List<Versenyzo>();
+            for (int i = 0; i < N; i++)
+            {
+                if (versenyzok[i].nev.StartsWith("John"))
+                {
+                    JohnNevuek.Add(versenyzok[i]);
+                }
+            }
+            Console.WriteLine("John keresztnevű játékosok: ");
+            foreach (Versenyzo item in JohnNevuek)
+            {
+                Console.WriteLine($"\t{item.nev}");
+            }
+
+            //8. feladat
+            List<string> keresztnevek = new List<string>();
+            Dictionary<string, int> keresztnevDb = new Dictionary<string, int>();
+            foreach (Versenyzo versenyzo in versenyzok)
+            {
+                string kulcs = versenyzo.nev.Substring(0,5);
+                if (keresztnevDb.ContainsKey(kulcs))
+                {
+                    keresztnevDb[kulcs]++;
+                    keresztnevek.Add(kulcs);
+                }
+                else
+                {
+                    keresztnevDb.Add(kulcs, 1);
+                }
+            }
+            
+            foreach (KeyValuePair<string, int> item in keresztnevDb)
+            {
+                Console.WriteLine($"{item.Key} névből {item.Value} név");
+            }
+            keresztnevek.Sort();
+            File.WriteAllLines("kernevek.txt", keresztnevek);
+        }
 
         static void Main(string[] args)
         {
