@@ -57,6 +57,36 @@ namespace Balkezesek
                     Console.WriteLine($"{elsoPalyaraLepes1980[i].nev} magassága: {elsoPalyaraLepes1980[i].magassag*2,54:N1} cm");
                 }
             }
+
+            //4. feladat
+            int minEvszam = 1900;
+            int maxEvszam = 1999;
+            int evszamBeker;
+            bool igaz = false;
+            do
+            {
+                Console.Write("Kérek egy évszámot 1900 és 1999 között: ");
+                evszamBeker = int.Parse(Console.ReadLine());
+                igaz = evszamBeker >= minEvszam && evszamBeker <= maxEvszam;
+            } while (!igaz);
+            List<Versenyzo> valasztottEvbenEloszorPalyaraLepok = new List<Versenyzo>();
+            for (int i = 0; i < N; i++)
+            {
+                if (versenyzok[i].elso.Contains(Convert.ToString(evszamBeker)) )
+                {
+                    valasztottEvbenEloszorPalyaraLepok.Add(versenyzok[i]);
+                }
+            }
+
+            foreach (Versenyzo item in valasztottEvbenEloszorPalyaraLepok)
+            {
+                Console.WriteLine(item.nev);
+                Console.WriteLine(item.elso);
+                Console.WriteLine(item.utolso);
+                Console.WriteLine(item.suly);
+                Console.WriteLine(item.magassag);
+                Console.WriteLine();
+            }
         }//progind
 
         static void Main(string[] args)
